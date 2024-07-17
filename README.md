@@ -58,8 +58,22 @@ O projeto utiliza Docker e Docker Compose para criar um ambiente de desenvolvime
 - **Dockerfile:** Define a imagem do Docker para o ambiente PHP com Apache.
 - **docker-compose.yml:** Define os serviços e redes necessários para o projeto.
 
+
+## Acessando o projeto
+
+Para acessar o sistema
+```bash
+http://localhost:8080
+```
+
+Para acessar o PgAdmin
+```bash
+http://localhost:5050
+```
+
 ## Executando os Testes
 
 Para rodar os testes unitários, utilize o comando:
 ```bash
 composer test
+```
