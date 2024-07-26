@@ -11,9 +11,9 @@ Environment::load(__DIR__);
 DatabaseConnection::config(
     getenv('DB_DRIVER'),
     getenv('DB_HOST'),
-    getenv('DB_NAME'),
-    getenv('DB_USER'),
-    getenv('DB_PASS'),
+    getenv('POSTGRES_DB'),
+    getenv('POSTGRES_USER'),
+    getenv('POSTGRES_PASSWORD'),
     getenv('DB_PORT')
 );
 

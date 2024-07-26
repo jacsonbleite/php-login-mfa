@@ -35,21 +35,33 @@ Para garantir a qualidade do código e a funcionalidade do sistema, implementei 
     cd php-login-mfa
     ```
 
-2. **Instale as dependências:**
-    ```bash
-    docker exec -it php-apache /bin/bash
-    composer install
-    ```
+2. **Configure as variáveis de ambiente:**
+    dentro do diretório **html** está localizado o arquivo `.env.example` que é responsável por armazenar os dados sensíveis do projeto.
+    faça uma cópia desse arquivo renomeando-o para `.env` e inserido os dados necessário para a configuração e funcionamento do prejo.
+    O arquivo está servindo o `docker-compose.yml` com as configurações da base de dados e do SGDB (PgAdmin)
 
-3. **Configure as variáveis de ambiente:**
-    Crie um arquivo `.env` na raiz do projeto e adicione as configurações do seu servidor de e-mail e outras variáveis necessárias.
 
-4. **Configuração do Docker:**
+3. **Configuração do Docker:**
     Certifique-se de que o Docker e o Docker Compose estão instalados na sua máquina. Em seguida, execute os seguintes comandos para construir e iniciar os containers:
     ```bash
     docker-compose build
     docker-compose up -d
     ```
+
+4. **Instale as dependências:**
+    ```bash
+    docker exec -it php-apache /bin/bash
+    composer install
+    ```
+
+
+
+## Configuração do .htaccess
+
+O arquivo .htaccess é o responsável por permitir que a URL seja "amigável"
+_ex: http://localhost:8080/param1/param2_
+No diretório **html**  é possível verifiar e realizar alterações conforme necessário
+
 
 ## Estrutura do Docker
 

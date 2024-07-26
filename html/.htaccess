@@ -1,8 +1,17 @@
-<IfModule mod_rewrite.c>
-RewriteEngine On
-RewriteBase /php-login-mfa/
-RewriteRule ^index.php$ - [L]
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule . /php-login-mfa/index.php [L]
-</IfModule>
+# CONFIGURAÇÃO PARA LINUX E/OU DOCKER
+RewriteEngine on
+Options All -Indexes
+RewriteCond %{SCRIPT_FILENAME} !-f
+RewriteCond %{SCRIPT_FILENAME} !-d
+RewriteRule ^(.*)$ ./index.php [QSA,NC]
+
+
+# CONFG PARA APACHE NO WINDOWS
+#<IfModule mod_rewrite.c>
+#RewriteEngine On
+#RewriteBase /php-login-mfa/
+#RewriteRule ^index.php$ - [L]
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteRule . /php-login-mfa/index.php [L]
+#</IfModule> 
